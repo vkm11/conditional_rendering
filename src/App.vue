@@ -4,6 +4,7 @@
   <h2 v-else-if="num > 0">The number is positive</h2>
   <h2 v-else>Not a number</h2>
 
+
   <!-- <div v-if="display">
   <h4>Vijaykumar</h4>
   <h4>Prajwal</h4>
@@ -21,11 +22,19 @@
 <h4 v-show="showElement">Using v-show</h4>
 <h4 v-if="showElement">Using v-if</h4>
 
+<!-- example 2 -->
+<div>
+  <h1 v-if="show"> If Else Condition</h1>
+  <h1 v-else>Else Condition</h1>
+<!-- using toogle  -->
+  <button v-on:click="show=!show"> Toogle</button>
+</div>
 </template>
 
 <script>
 export default {
   name: "App",
+  
   data() {
     return {
       // num:'v'  // output:- not a number
@@ -33,6 +42,9 @@ export default {
       num: -1, //output:- The number is negative
       display: true,
       showElement: true,
+
+      // example2
+      show: true
     };
   },
 };
